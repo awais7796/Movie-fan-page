@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie fan-page</title>
+    <title>Harry Potter Fan Central</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#trailers">Trailers</a></li>
+                <li><a href="#quiz">Trivia Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="hero">
+                <h1>Welcome to Harry Potter Fan Central</h1>
+                <div class="quote-container">
+                    <h3>Quote of the Day:</h3>
+                    <p id="quote"></p>
+                    <button onclick="generateQuote()">New Quote</button>
+                </div>
+            </div>
+            <div class="movie-posters">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr7lVYfJ98AzublE4JWU_toHsdSwui8n825g&s" alt="Harry Potter Movie Poster 1">
+                <img src="https://divinepicturesoftruth.in/cdn/shop/files/HarryPotterandtheSorcerer_sStone_2001.jpg?v=1721127538" alt="Harry Potter Movie Poster 2">
+                <img src="https://imgc.allpostersimages.com/img/posters/trends-international-harry-potter-and-the-order-of-the-phoenix-one-sheet-french-version_u-L-Q1RFZ9P0.jpg" alt="Harry Potter Movie Poster 3">
+            </div>
+        </section>
+
+        <!-- Characters Section -->
+        <section id="characters">
+            <h2>Main Characters</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <img src="imfg\harry.png" alt="Harry Potter">
+                    <h3>Harry Potter</h3>
+                    <p>The Boy Who Lived, Harry Potter is the main protagonist of the series.</p>
+                </div>
+                <div class="character-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMseKfywuR66EgKqR1qNzi2swzi2YEvvjmQg&s" alt="Hermione Granger">
+                    <h3>Hermione Granger</h3>
+                    <p>The brightest witch of her age and one of Harry's best friends.</p>
+                </div>
+                <div class="character-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC7G7IILmxTeQ8Cd0Fem2BZOhASPvStWpD_g&s" alt="Ron Weasley">
+                    <h3>Ron Weasley</h3>
+                    <p>Harry's loyal best friend and a member of the Weasley family.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trailers Section -->
+        <section id="trailers">
+            <h2>Movie Trailers</h2>
+            <div class="trailer-grid">
+                <div class="trailer">
+                    <h3>Philosopher's Stone</h3>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://youtu.be/q2aOXWsGMBc?si=v8FulilDD6q7CWEm" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="trailer">
+                    <h3>Chamber of Secrets</h3>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://youtu.be/qeB5Solqo04?si=aUrr1z0yd_HrORzN" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <h2>Harry Potter Trivia Quiz</h2>
+            <div id="quiz-container">
+                <div id="question-container">
+                    <p id="question"></p>
+                </div>
+                <div id="options-container"></div>
+                <button id="submit-btn" onclick="checkAnswer()">Submit Answer</button>
+                <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next Question</button>
+                <p id="score-display">Score: <span id="score">0</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Harry Potter Fan Central. This is a fan-made website.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
